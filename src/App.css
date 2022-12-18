@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+html, body {
+  background-color: #F4F4F6 !important;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-background {
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-background {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.login-card .card-body {
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.login-card {
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 3px 6px #00000029;
+
+}
+
+
+.login-card.card {
+  display: flex;
+  border: none;
+  border-radius: 12px;
+}
+
+.login-card div {
+  border: none;
+  border-radius: 12px;
+}
+
+.login-title {
+  font-size: larger;
+  text-align: left;
+  color: #537178;
+  margin-bottom: 21px;
+}
+
+.login-fields input {
+  background-color: #EEF1F8;
+  border: none;
+  width: 100% !important;
+}
+
+.m-top-5 {
+  margin-top: 10px;
+}
+
+.login-fields.input-group {
+  width: 100%
+}
+
+.login-button {
+  background-color: #5285EC !important;
+  margin-top: 12px;
+  width: 100%;
+  /* margin-right: 5px; */
+}
+
+.login-card button {
+  margin-right: 25px;
+}
+
+.top-bar {
+  background-color: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  z-index: 1;
+  /* position: sticky; */
+}
+
+.login-card.no-task {
+  box-shadow: 0px 3px 6px #0000000A;
+  min-height: 150px
+}
+
+.no-task-wrapper {
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.new-task-button {
+  background-color: #5285EC !important;
+  margin-top: 15px;
+  font-size: small !important;
+}
+
+.login-font {
+  font-size: 20px;
+  color: #537178;
+}
+
+.modal-dialog.w-90.modal-lg.modal-dialog-centered {
+  max-width: 350px;
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-header button {
+  display: none;
+}
+
+.modal-footer {
+  display: block !important;
+  border-top: none !important;
+}
+
+.modal-footer button {
+  width: 284px;
+  height: 40px;
+}
+
+.top-cards.login-card {
+  margin-top: 40px;
+  box-shadow: 0px 3px 6px #0000000A;
+  flex-grow: 1;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 25px
+}
+
+
+.top-cards-body {
+  text-align: left;
+}
+
+.task-table {
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+
+.table-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.search-field {
+  width: 70%;
+  height: 40px;
+  border: none !important;
+  /* UI Properties */
+  background: #D9DFEB 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  outline-width: 0;
+  margin-left: 10px;
+  font-size: small;
+}
+
+.search-field:focus {
+  outline-width: 0;
+}
+
+.search-section {
+  border: none;
+  /* UI Properties */
+  background: #D9DFEB 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.search-section {
+  padding-left: 10px;
+}
+
+.task-table-title {
+  flex: 0.9
+}
+
+.dashboard-container {
+  padding: 0 65px
+}
+
+.new-task-button.table-btn {
+  height: 40px;
+  width: 100%;
+}
+
+.table-content {
+  margin-top: 10px;
+}
+
+.title-text {
+  font-size: large;
+  font-weight: 600;
+  color: #537178
+}
+
+.table-content .card {
+  border: none;
+}
+
+.desc-text {
+  color: #5285EC;
+  font-size: large;
+  font-weight: 500;
+}
+
+.table-content-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.task-checkbox {
+  border: 2px solid #95A4AB;
+  border-radius: 4px;
+  background: #F4F4F6 0% 0% no-repeat padding-box;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.completed-tasks {
+  color: #5285EC;
+  opacity: 1;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.total-tasks {
+  font-size: 14px;
+  color: #8F9EA2;
+}
+
+.task-ul {
+  list-style-position: inside;
+  padding: 0;
+  color: #8F9EA2;
+}
+
+.task-ul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-strike {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+.horizontal-divider {
+  width: 95%;
+  margin: auto;
+}
+
+.error-msg {
+  text-align: left;
+  display: inherit;
+  margin-left: 5px;
+  color: #dc3545;
+  font-size: small;
+}
+
+.cl-grey{
+  color: #537178
+}
+
+
+@media (max-width: 800px) {
+  .cards-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 2px
   }
-  to {
-    transform: rotate(360deg);
+
+  .login-card {
+    width: 100%
+  }
+
+  .table-top-section {
+    flex-direction: column;
+  }
+
+  .flex-item.table-new-task {
+    width: 100%
+  }
+
+  .dashboard-container {
+    padding: 0;
+  }
+
+  .login-card.card {
+    border-radius: 0;
+  }
+
+  .search-section {
+    width: 100%;
+  }
+
+  #login-card {
+    margin: 0 12px;
+    border-radius: 12px
+  }
+
+  .modal-dialog.w-90.modal-lg.modal-dialog-centered {
+    max-width: 100%;
   }
 }
